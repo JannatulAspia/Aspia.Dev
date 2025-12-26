@@ -381,7 +381,7 @@
                 <div class="dot yellow"></div>
                 <div class="dot green"></div>
             </div>
-            <div class="terminal-title">terminal@Aspia-dev:~/portfolio</div>
+            <div class="terminal-title">terminal@jannatulaspia:~/portfolio</div>
         </div>
 
         <!-- Terminal Body -->
@@ -412,11 +412,11 @@
             <div class="command-output">
                 <div class="command-line">welcome.sh</div>
                 <div style="color: var(--terminal-blue); margin-left: 20px;">
-                    Welcome to Aspia's Developer Toolkit<br>
-                    Type 'help' for available commands<br>
-                    Last login: Today at $(date +%H:%M)<br>
-                    System: Creative Frontend Developer v2.0
-                </div>
+    Welcome to Jannatul Ferdus Aspia's Developer Portfolio<br>
+    Frontend Developer | UI/UX Specialist | Creative Coder<br>
+    Last login: Today at $(date +%H:%M)<br>
+    System: Developer Portfolio v3.0
+</div>
             </div>
 
             <!-- Projects Section -->
@@ -437,7 +437,7 @@
                         <i class="fas fa-graduation-cap project-icon"></i>
                         <h3 class="project-title">LearnHub</h3>
                     </div>
-                    <p class="project-description">AI-powered course marketplace with instructor dashboard, dark/light mode, particle animations, and real-time statistics. Complete with dual authentication system.</p>
+                    <p class="project-description">Interactive course marketplace with instructor dashboard, dark/light mode, particle animations, and real-time statistics. Complete with modern UI/UX design.</p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
@@ -462,7 +462,7 @@
                         <i class="fas fa-music project-icon"></i>
                         <h3 class="project-title">Moodify</h3>
                     </div>
-                    <p class="project-description">AI-powered music recommendation system based on emotional states. Features dynamic mood-specific themes, smooth animations, and intuitive UI with visual feedback.</p>
+                    <p class="project-description">Music recommendation interface with dynamic mood-specific themes, smooth animations, and intuitive UI with visual feedback. Focus on frontend interactivity.</p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
@@ -487,7 +487,7 @@
                         <i class="fas fa-palette project-icon"></i>
                         <h3 class="project-title">BrandCraft</h3>
                     </div>
-                    <p class="project-description">AI brand identity generator creating personalized color palettes, typography systems, and design principles with real-time previews and glassmorphism effects.</p>
+                   <p class="project-description">Brand identity generator creating personalized color palettes, typography systems, and design principles with real-time previews and glassmorphism effects.</p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
@@ -588,17 +588,15 @@
                         <div class="contact-text">Email</div>
                         <div class="contact-subtext">jannatul.aspia2001@gmail.com</div>
                     </div>
-                    <div class="contact-item">
-    <i class="fab fa-linkedin contact-icon"></i>
-    <span class="contact-text">LinkedIn</span>
-    <span class="contact-subtext">
-        <a href="https://www.linkedin.com/in/jannatul-ferdus-aspia-0431b937a/" 
-           target="_blank" 
-           style="color: var(--terminal-blue); text-decoration: none;">
-           https://www.linkedin.com/in/jannatul-ferdus-aspia-0431b937a/
-        </a>
-    </span>
-</div>
+                   <div class="contact-item">
+                        <i class="fab fa-linkedin contact-icon"></i>
+                        <div class="contact-text">LinkedIn</div>
+                        <a href="https://www.linkedin.com/in/jannatul-ferdus-aspia-0431b937a/" 
+                           class="contact-link" 
+                           target="_blank">
+                           jannatulaspia
+                        </a>
+                    </div>
                     <div class="contact-item">
                         <i class="fab fa-github contact-icon"></i>
                         <div class="contact-text">GitHub</div>
@@ -609,14 +607,14 @@
         </div>
 
         <!-- Terminal Footer -->
-        <div class="terminal-footer">
-            <div class="command-line">system status</div>
-            <div>Status: <span style="color: var(--terminal-green);">● ONLINE</span></div>
-            <div>Uptime: 24/7 • Last updated: $(date +%Y-%m-%d)</div>
-            <div style="margin-top: 10px; color: var(--terminal-purple);">
-                Type 'portfolio --help' for more options | CTRL+C to exit
-            </div>
-        </div>
+      <div class="terminal-footer">
+    <div class="command-line">system status</div>
+    <div>Jannatul Ferdus Aspia • Frontend Developer Portfolio</div>
+    <div>Status: <span style="color: var(--terminal-green);">● DEVELOPER MODE</span></div>
+    <div style="margin-top: 10px; color: var(--terminal-purple);">
+        Type 'projects --list' for all projects | CTRL+C to exit
+    </div>
+</div>
     </div>
 
     <script>
@@ -711,20 +709,21 @@
         if(skillsSection) observer.observe(skillsSection);
         
         // Interactive terminal commands
-        document.addEventListener('keydown', function(e) {
-            if(e.key === 'h' && e.ctrlKey) {
-                e.preventDefault();
-                alert('Available commands:\n• projects - View projects\n• skills - View skills\n• contact - Contact info\n• clear - Clear terminal\n• help - Show this message');
-            }
-            
-            if(e.key === 'c' && e.ctrlKey) {
-                e.preventDefault();
-                document.body.classList.add('glitch');
-                setTimeout(() => {
-                    document.body.classList.remove('glitch');
-                }, 500);
-            }
+       // Interactive terminal commands
+document.addEventListener('keydown', function(e) {
+    if(e.key === 'h' && e.ctrlKey) {
+        e.preventDefault();
+        alert('Available commands:\n• projects - View frontend projects\n• skills - View technical skills\n• contact - Contact info\n• clear - Clear terminal\n• help - Show this message');
+    }
+    
+    if(e.key === 'p' && e.ctrlKey) {
+        e.preventDefault();
+        window.scrollTo({
+            top: document.querySelector('.project-grid').offsetTop,
+            behavior: 'smooth'
         });
+    }
+});
         
         // Project hover effects
         document.querySelectorAll('.project-terminal').forEach(project => {
